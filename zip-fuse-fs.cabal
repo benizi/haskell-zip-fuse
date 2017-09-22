@@ -1,0 +1,30 @@
+name:                zip-fuse-fs
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/benizi/zip-fuse-fs
+license:             MIT
+license-file:        LICENSE
+author:              Benjamin R. Haskell
+-- maintainer:
+copyright:           2017
+-- category:
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable zip-fuse-fs
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , HFuse == 0.2.4.*
+                     , zip-archive == 0.3.0.*
+                     , bytestring == 0.10.8.*
+                     , data-default == 0.7.1.*
+                     , directory == 1.3.0.*
+                     , filepath == 1.4.1.*
+                     , process == 1.4.3.*
+                     , safe-exceptions == 0.1.5.*
+                     , unix == 2.7.2.*
+  ghc-options:         -threaded
